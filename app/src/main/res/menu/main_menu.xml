@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@android:drawable/alert_light_frame"
+        android:title="Home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/hot_deals"
+        android:icon="@android:drawable/btn_star"
+        android:title="Hot Deals"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/chat"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Chat"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_calendar"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="Calendar"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/use_case"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Use Case"
+        app:showAsAction="always" />
+</menu>

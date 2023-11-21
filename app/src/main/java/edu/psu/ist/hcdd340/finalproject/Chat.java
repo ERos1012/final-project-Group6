@@ -9,18 +9,19 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class Chat extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_chat);
+
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottomNavigationView);
 
-        // Set Home selected
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        // Set Chat selected
+        bottomNavigationView.setSelectedItemId(R.id.chat);
 
         // Perform item selected listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 switch(item.getItemId())
                 {
                     case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.menu_calendar:
                         startActivity(new Intent(getApplicationContext(), Calendar.class));
@@ -40,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.chat:
-                        startActivity(new Intent(getApplicationContext(),Chat.class));
-                        overridePendingTransition(0,0);
                         return true;
                     case R.id.use_case:
                         startActivity(new Intent(getApplicationContext(),UseCase.class));
@@ -51,7 +52,5 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 }
-
