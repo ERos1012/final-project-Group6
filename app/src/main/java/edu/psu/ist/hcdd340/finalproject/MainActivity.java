@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.home:
                         return true;
                     case R.id.menu_calendar:
-                        startActivity(new Intent(getApplicationContext(), Calendar.class));
+                        startActivity(new Intent(getApplicationContext(), CalendarPanel.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.hot_deals:
