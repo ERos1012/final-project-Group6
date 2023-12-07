@@ -35,7 +35,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Calendar"
+            android:name=".CalendarPanel"
             android:exported="true" />
     </application>
 
