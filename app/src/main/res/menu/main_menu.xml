@@ -10,7 +10,7 @@
     <item
         android:id="@+id/hot_deals"
         android:icon="@android:drawable/btn_star"
-        android:title="Hot Deals"
+        android:title="Partners"
         app:showAsAction="always" />
     <item
         android:id="@+id/chat"
