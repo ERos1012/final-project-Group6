@@ -7,14 +7,26 @@
     tools:context=".Chat">
 
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/editTextMessage" />
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:hint="Type a message..."
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine|textCapSentences"
+        android:maxLines="5"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewChat"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -24,6 +36,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/main_menu"/>
+        app:menu="@menu/main_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

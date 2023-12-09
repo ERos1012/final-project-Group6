@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/imageViewProfileReceived"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/default_profile_image_user"
+    android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageViewProfileReceived"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewNameReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiver's Name"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/textViewTimestampReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:45 PM"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/textViewMessageReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@drawable/round_corner_background_received"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

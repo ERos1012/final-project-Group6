@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#CCCCCC" /> <!-- Set the background color -->
+        </shape>
+    </item>
+    <item android:drawable="@drawable/frn_profile_picture" />
+</layer-list>

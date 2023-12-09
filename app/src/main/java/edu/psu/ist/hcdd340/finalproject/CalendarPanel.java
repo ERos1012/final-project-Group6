@@ -131,33 +131,111 @@ public class CalendarPanel extends AppCompatActivity {
     }
 
     private void populateDummyEvents() {
-        // Add dummy events on December 9, 2023
+        // Add dummy events on December 6, 2023
         Calendar calendar1 = Calendar.getInstance();
-        calendar1.set(2023, Calendar.DECEMBER, 9);
+        calendar1.set(2023, Calendar.DECEMBER, 6);
         String dateString1 = formatDate(calendar1.getTime());
 
         List<Event> events1 = new ArrayList<>();
-        events1.add(new Event("General Body Meeting", "10:00 AM", "Downtown State College", "Meeting about the upcoming food drive"));
-        events1.add(new Event("Food Drive", "2:00 PM", "Penn State Campus", "Food Drive for students"));
+        events1.add(new Event("Community Service Day", "9:00 AM", "Various Locations", "Participate in community service activities"));
         eventsMap.put(dateString1, events1);
 
-        // Add dummy events on December 3, 2023
+        // Add dummy events on December 7, 2023
         Calendar calendar2 = Calendar.getInstance();
-        calendar2.set(2023, Calendar.DECEMBER, 3);
+        calendar2.set(2023, Calendar.DECEMBER, 7);
         String dateString2 = formatDate(calendar2.getTime());
 
         List<Event> events2 = new ArrayList<>();
-        events2.add(new Event("Fundraiser", "1:00 PM", "Downtown State College", "Fundraising for next event"));
+        events2.add(new Event("Tech Workshop", "2:00 PM", "Innovation Center", "Hands-on workshop on emerging technologies"));
+        events2.add(new Event("Art Class", "6:00 PM", "Art Studio", "Learn painting and drawing techniques"));
         eventsMap.put(dateString2, events2);
 
-        // Add dummy events on December 12, 2023
+        // Add dummy events on December 8, 2023
         Calendar calendar3 = Calendar.getInstance();
-        calendar3.set(2023, Calendar.DECEMBER, 12);
+        calendar3.set(2023, Calendar.DECEMBER, 8);
         String dateString3 = formatDate(calendar3.getTime());
 
         List<Event> events3 = new ArrayList<>();
-        events3.add(new Event("Hunger and Homelessness Week", "3:00 PM", "Zoom", "virtual hour of volunteer service on Earth Day"));
-        events3.add(new Event("MLK Act of Service", "5:00 PM", "Zoom", "virtual hour of volunteer service to honor the legacy of Dr. Martin Luther King"));
+        events3.add(new Event("Fitness Challenge", "7:30 AM", "City Park", "Join us for a morning fitness challenge"));
+        events3.add(new Event("Networking Event", "5:30 PM", "Business Center", "Connect with professionals from various industries"));
         eventsMap.put(dateString3, events3);
+
+        // Add dummy events on December 9, 2023
+        Calendar calendar11 = Calendar.getInstance();
+        calendar11.set(2023, Calendar.DECEMBER, 9);
+        String dateString11 = formatDate(calendar11.getTime());
+
+        List<Event> events11 = new ArrayList<>();
+        events11.add(new Event("Community Gathering", "6:00 PM", "Community Center", "Join us for a festive community gathering"));
+        eventsMap.put(dateString11, events11);
+
+
+        // Add dummy events on December 10, 2023
+        Calendar calendar4 = Calendar.getInstance();
+        calendar4.set(2023, Calendar.DECEMBER, 10);
+        String dateString4 = formatDate(calendar4.getTime());
+
+        List<Event> events4 = new ArrayList<>();
+        events4.add(new Event("Community Cleanup", "9:00 AM", "Local Park", "Join us for a community cleanup event"));
+        eventsMap.put(dateString4, events4);
+
+        // Add dummy events on December 11, 2023
+        Calendar calendar5 = Calendar.getInstance();
+        calendar5.set(2023, Calendar.DECEMBER, 11);
+        String dateString5 = formatDate(calendar5.getTime());
+
+        List<Event> events5 = new ArrayList<>();
+        events5.add(new Event("Holiday Parade", "2:00 PM", "Downtown State College", "Annual holiday parade celebration"));
+        eventsMap.put(dateString5, events5);
+
+        // Add dummy events on December 12, 2023
+        Calendar calendar6 = Calendar.getInstance();
+        calendar6.set(2023, Calendar.DECEMBER, 12);
+        String dateString6 = formatDate(calendar6.getTime());
+
+        List<Event> events6 = new ArrayList<>();
+        events6.add(new Event("Hunger and Homelessness Week", "3:00 PM", "Zoom", "Virtual hour of volunteer service on Earth Day"));
+        events6.add(new Event("MLK Act of Service", "5:00 PM", "Zoom", "Virtual hour of volunteer service to honor the legacy of Dr. Martin Luther King"));
+        eventsMap.put(dateString6, events6);
+
+        // Add dummy events on December 13, 2023
+        Calendar calendar7 = Calendar.getInstance();
+        calendar7.set(2023, Calendar.DECEMBER, 13);
+        String dateString7 = formatDate(calendar7.getTime());
+
+        List<Event> events7 = new ArrayList<>();
+        events7.add(new Event("Team Building Workshop", "11:00 AM", "Company Office", "Interactive workshop to build team collaboration"));
+        events7.add(new Event("Charity Auction", "7:00 PM", "Convention Center", "Auction event to support local charities"));
+        eventsMap.put(dateString7, events7);
+
+        // Add dummy events on December 14, 2023
+        Calendar calendar8 = Calendar.getInstance();
+        calendar8.set(2023, Calendar.DECEMBER, 14);
+        String dateString8 = formatDate(calendar8.getTime());
+
+        List<Event> events8 = new ArrayList<>();
+        events8.add(new Event("Tech Conference", "9:30 AM", "Conference Center", "Conference on the latest technology trends"));
+        events8.add(new Event("Networking Mixer", "6:00 PM", "City Lounge", "Social networking event for professionals"));
+        eventsMap.put(dateString8, events8);
+
+        // Add dummy events on December 15, 2023
+        Calendar calendar9 = Calendar.getInstance();
+        calendar9.set(2023, Calendar.DECEMBER, 15);
+        String dateString9 = formatDate(calendar9.getTime());
+
+        List<Event> events9 = new ArrayList<>();
+        events9.add(new Event("Art Exhibition", "10:00 AM", "Art Gallery", "Showcasing local artists' work"));
+        events9.add(new Event("Music Festival", "4:00 PM", "Outdoor Venue", "Live music performances and food stalls"));
+        eventsMap.put(dateString9, events9);
+
+        // Add dummy events on December 16, 2023
+        Calendar calendar10 = Calendar.getInstance();
+        calendar10.set(2023, Calendar.DECEMBER, 16);
+        String dateString10 = formatDate(calendar10.getTime());
+
+        List<Event> events10 = new ArrayList<>();
+        events10.add(new Event("Book Club Meeting", "6:30 PM", "Public Library", "Discussion on the latest book selection"));
+        events10.add(new Event("Movie Night", "8:00 PM", "Community Center", "Outdoor movie screening for the community"));
+        eventsMap.put(dateString10, events10);
     }
 }
