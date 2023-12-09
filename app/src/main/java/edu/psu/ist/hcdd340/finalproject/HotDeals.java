@@ -73,10 +73,6 @@ public class HotDeals extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),Chat.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.use_case:
-                        startActivity(new Intent(getApplicationContext(),UseCase.class));
-                        overridePendingTransition(0,0);
-                        return true;
                 }
                 return false;
             }

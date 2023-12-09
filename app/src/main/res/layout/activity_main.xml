@@ -1,28 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- First Column - Meals Recovered and Total Meals Recovered -->
+    <LinearLayout
+        android:id="@+id/firstColumnLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/secondColumnLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsTextView">
+
+        <!-- Modified Meals Recovered TextView -->
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#FEDA63"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"> <!-- Center content -->
+
+            <TextView
+                android:id="@+id/mealsRecoveredLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meals Recovered"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/mealsRecoveredNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textColor="@android:color/black"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+        <!-- Modified Total Meals Recovered TextView -->
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#FEDA63"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"> <!-- Center content -->
+
+            <TextView
+                android:id="@+id/totalMealsRecoveredLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Meals Recovered"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/totalMealsRecoveredNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500"
+                android:textColor="@android:color/black"
+                android:textSize="34sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Second Column - Number of Volunteers and Hours Volunteered -->
+    <LinearLayout
+        android:id="@+id/secondColumnLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/firstColumnLayout"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsTextView">
+
+        <!-- Modified Number of Volunteers TextView -->
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#FEDA63"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"> <!-- Center content -->
+
+            <TextView
+                android:id="@+id/numVolunteersLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Volunteers"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/numVolunteersNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@android:color/black"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+        <!-- Modified Hours Volunteered TextView -->
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#FEDA63"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"> <!-- Center content -->
+
+            <TextView
+                android:id="@+id/hoursVolunteeredLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hours Volunteered"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/hoursVolunteeredNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textColor="@android:color/black"
+                android:textSize="34sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- ListView for RSVP events -->
+    <ListView
+        android:id="@+id/rsvpEventListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RSVPEventsTextView"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <!-- Other Views remain unchanged -->
+
     <TextView
+        android:id="@+id/statisticsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:text="Statistics"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Bottom NavigationView -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/main_menu"/>
+        app:menu="@menu/main_menu" />
+
+    <TextView
+        android:id="@+id/RSVPEventsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="RSVP Events"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstColumnLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
