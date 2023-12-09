@@ -44,10 +44,6 @@ public class Chat extends AppCompatActivity {
                         return true;
                     case R.id.chat:
                         return true;
-                    case R.id.use_case:
-                        startActivity(new Intent(getApplicationContext(),UseCase.class));
-                        overridePendingTransition(0,0);
-                        return true;
                 }
                 return false;
             }

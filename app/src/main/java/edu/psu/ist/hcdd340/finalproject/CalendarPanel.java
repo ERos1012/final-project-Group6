@@ -99,10 +99,6 @@ public class CalendarPanel extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Chat.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.use_case:
-                        startActivity(new Intent(getApplicationContext(), UseCase.class));
-                        overridePendingTransition(0, 0);
-                        return true;
                 }
                 return false;
             }
@@ -141,8 +137,8 @@ public class CalendarPanel extends AppCompatActivity {
         String dateString1 = formatDate(calendar1.getTime());
 
         List<Event> events1 = new ArrayList<>();
-        events1.add(new Event("Event 1A", "10:00 AM", "Location A", "Short description for Event 1A"));
-        events1.add(new Event("Event 1B", "2:00 PM", "Location B", "Short description for Event 1B"));
+        events1.add(new Event("General Body Meeting", "10:00 AM", "Downtown State College", "Meeting about the upcoming food drive"));
+        events1.add(new Event("Food Drive", "2:00 PM", "Penn State Campus", "Food Drive for students"));
         eventsMap.put(dateString1, events1);
 
         // Add dummy events on December 3, 2023
@@ -151,7 +147,7 @@ public class CalendarPanel extends AppCompatActivity {
         String dateString2 = formatDate(calendar2.getTime());
 
         List<Event> events2 = new ArrayList<>();
-        events2.add(new Event("Event 2A", "1:00 PM", "Location C", "Short description for Event 2A"));
+        events2.add(new Event("Fundraiser", "1:00 PM", "Downtown State College", "Fundraising for next event"));
         eventsMap.put(dateString2, events2);
 
         // Add dummy events on December 12, 2023
@@ -160,8 +156,8 @@ public class CalendarPanel extends AppCompatActivity {
         String dateString3 = formatDate(calendar3.getTime());
 
         List<Event> events3 = new ArrayList<>();
-        events3.add(new Event("Event 3A", "3:00 PM", "Location D", "Short description for Event 3A"));
-        events3.add(new Event("Event 3B", "5:00 PM", "Location E", "Short description for Event 3B"));
+        events3.add(new Event("Hunger and Homelessness Week", "3:00 PM", "Zoom", "virtual hour of volunteer service on Earth Day"));
+        events3.add(new Event("MLK Act of Service", "5:00 PM", "Zoom", "virtual hour of volunteer service to honor the legacy of Dr. Martin Luther King"));
         eventsMap.put(dateString3, events3);
     }
 }
