@@ -1,7 +1,11 @@
 package edu.psu.ist.hcdd340.finalproject;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,6 +33,22 @@ public class CalendarPanel extends AppCompatActivity {
     private CalendarView calendarView;
     private ListView eventListView;
     private Map<String, List<Event>> eventsMap;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_login, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item){    //navigates to the login screen if the button is clicked
+        int menuId = item.getItemId();
+        if (menuId == R.id.menu_login) {
+            Log.d(TAG, "LogIn menu clicked!");
+            Intent loginIntent = new Intent(this, LoginActivity.class);
+            startActivity(loginIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

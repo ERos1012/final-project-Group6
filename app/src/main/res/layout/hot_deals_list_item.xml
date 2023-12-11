@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,80 +7,73 @@
 
     <!-- Rest of your layout components -->
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:id="@+id/campus_list_image_id"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
-            android:id="@+id/textLayout"
             android:layout_width="309dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="8dp"
-            android:layout_toRightOf="@id/campus_list_image_id">
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp">
 
             <TextView
                 android:id="@+id/campus_list_title_id"
-                style="@style/TextAppearance.AppCompat.Body1"
+                style="@style/TextAppearance.AppCompat.Headline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="campus_list_title_id"
-                android:textSize="25sp" />
+                tools:ignore="HardcodedText" />
 
-            <!-- New LinearLayout for campus_list_phone and chatIcon -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/campus_list_phone"
-                    style="@style/TextAppearance.AppCompat.Body2"
+                    style="@style/TextAppearance.AppCompat.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="campus_list_phone"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/chatIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🗨️"
-                    android:layout_marginLeft="8dp" />
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/status"
-                    style="@style/TextAppearance.AppCompat.Body2"
+                    style="@style/TextAppearance.AppCompat.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="Open "
-                    android:textSize="20sp" />
+                    tools:ignore="HardcodedText,InefficientWeight" />
 
                 <TextView
                     android:id="@+id/campus_list_email"
-                    style="@style/TextAppearance.AppCompat.Body2"
-                    android:layout_width="154dp"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Closes 5 PM"
-                    android:textSize="20sp" />
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
-
         </LinearLayout>
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

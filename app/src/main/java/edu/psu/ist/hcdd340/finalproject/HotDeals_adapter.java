@@ -93,14 +93,18 @@ public class HotDeals_adapter extends
         // set text color based on status
         campus.setRedTextColor(holder.status);
         campus.setGreenTextColor(holder.status);
+
+
+
+
+
+
     }
 
     @Override
     public int getItemCount() {
         return mCampusList.length;
     }
-
-
 }
 
 
