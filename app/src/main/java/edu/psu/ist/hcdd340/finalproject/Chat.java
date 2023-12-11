@@ -59,8 +59,8 @@ public class Chat extends AppCompatActivity {
         chatMessages = new ArrayList<>();
 
         // Add sample messages
-        ChatMessage sentMessage = new ChatMessage("Hello! I'm reaching out to ask about possible volunteer work with your organization", true, R.drawable.default_profile_image_user, "Volunteer", "12:34 PM");
-        ChatMessage receivedMessage = new ChatMessage("Hi there! We're happy to help. Please visit our website to learn more about us", false, R.drawable.default_profile_image_frn, "Abba Java", "1:45 PM");
+        ChatMessage sentMessage = new ChatMessage("Hello! I'm reaching out to ask about possible volunteer work with your organization", true, R.drawable.default_profile_image_user, "Volunteer (You)", "12:34 PM");
+        ChatMessage receivedMessage = new ChatMessage("Hi there! We're happy to help. Can you tell us more on how we can collaborate?", false, R.drawable.default_profile_image_frn, "Abba Java", "1:45 PM");
 
         // Add messages to the list
         chatMessages.add(sentMessage);
