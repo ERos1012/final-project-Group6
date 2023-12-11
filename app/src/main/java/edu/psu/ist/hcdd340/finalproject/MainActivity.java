@@ -1,8 +1,12 @@
 package edu.psu.ist.hcdd340.finalproject;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -20,6 +24,12 @@ import java.util.Set;
 public class MainActivity extends AppCompatActivity {
 
     private ListView rsvpEventListView;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_login, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +70,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Update TextViews with dummy data for statistics
         updateStatistics();
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){    //navigates to the login screen if the button is clicked
+        int menuId = item.getItemId();
+        if (menuId == R.id.menu_login) {
+            Log.d(TAG, "LogIn menu clicked!");
+            Intent loginIntent = new Intent(this, LoginActivity.class);
+            startActivity(loginIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void updateStatistics() {
