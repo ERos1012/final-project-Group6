@@ -8,11 +8,9 @@
 
     <!-- Rest of your layout components -->
 
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/campus_list_image_id"
@@ -21,24 +19,43 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
+            android:id="@+id/textLayout"
             android:layout_width="309dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingLeft="8dp">
+            android:paddingLeft="8dp"
+            android:layout_toRightOf="@id/campus_list_image_id">
 
             <TextView
                 android:id="@+id/campus_list_title_id"
-                style="@style/TextAppearance.AppCompat.Headline"
+                style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="campus_list_title_id" />
+                android:text="campus_list_title_id"
+                android:textSize="25sp" />
 
-            <TextView
-                android:id="@+id/campus_list_phone"
-                style="@style/TextAppearance.AppCompat.Title"
+            <!-- New LinearLayout for campus_list_phone and chatIcon -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="campus_list_phone" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/campus_list_phone"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="campus_list_phone"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/chatIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🗨️"
+                    android:layout_marginLeft="8dp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,20 +64,24 @@
 
                 <TextView
                     android:id="@+id/status"
-                    style="@style/TextAppearance.AppCompat.Title"
+                    style="@style/TextAppearance.AppCompat.Body2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:text="Open " />
+                    android:text="Open "
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/campus_list_email"
-                    style="@style/TextAppearance.AppCompat.Title"
+                    style="@style/TextAppearance.AppCompat.Body2"
                     android:layout_width="154dp"
                     android:layout_height="wrap_content"
-                    android:text="Closes 5 PM" />
+                    android:text="Closes 5 PM"
+                    android:textSize="20sp" />
             </LinearLayout>
+
         </LinearLayout>
-    </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
