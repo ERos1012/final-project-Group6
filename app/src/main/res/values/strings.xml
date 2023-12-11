@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Final Project</string>
-    <string name="app_name">Final Project</string>
     <string name="menu_login">Log In</string>
     <string name="login_button">LogIn</string>
     <string name="email_label">Email:</string>
