@@ -33,6 +33,9 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".CalendarPanel"
             android:exported="true" />
     </application>
