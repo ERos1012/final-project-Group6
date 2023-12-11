@@ -99,6 +99,8 @@ public class HotDeals_adapter extends
     public int getItemCount() {
         return mCampusList.length;
     }
+
+
 }
 
 
