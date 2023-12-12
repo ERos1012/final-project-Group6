@@ -5,4 +5,5 @@
     <string name="email_label">Email:</string>
     <string name="password_label">Password:</string>
     <string name="email_hint">user123@email.com</string>
+    <string name="login_register">Register</string>
 </resources>
